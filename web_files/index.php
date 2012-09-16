@@ -1,5 +1,8 @@
 <?php
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'/db_class.php');
+include "config.php";
 
+if(!loggedIn()){
+	header('refresh: 3; url=login.php');
+	echo "You must log in to view any tickets";
+}
 ?>
